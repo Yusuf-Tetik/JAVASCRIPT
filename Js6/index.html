@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Gün</title>
+</head>
+<body>
+    
+<!-- 
+    <script>
+        //DESTRUCTURING
+
+        // array destructuring
+        let user = ["Yusuf","Tetik","Bursa","inegöl","Sinanbey"];
+
+        // let firstName = name[0];
+        // let lastName = name[1];
+
+        // let [firstName, lastName] = name;
+        // let [firstName, lastName] = "Sadık Turan".split(" ");
+        let [firstName, lastName, ...address] = user;
+
+        console.log(firstName, lastName, address);
+
+        // object destructuring
+        let urun = {
+            marka: "Apple",
+            model: "IPhone 12",
+            fiyat: 10000
+        }
+
+        function urunGoster(obj) {
+            let {marka, model, fiyat = 0, satisDurumu = false} = obj;
+            console.log(marka, model, fiyat, satisDurumu);
+        }
+
+        urunGoster(urun);
+
+    </script>
+ -->
+
+ <!-- 
+
+    <script>
+        //MAP
+
+        const ogrenciler = new Map();
+
+        let user = {username: "Yusuf Tetik"};
+
+        ogrenciler.set(1,"Cansu Ardiç");
+        ogrenciler.set("2014","SDU");
+        ogrenciler.set(user,"Bilal");
+
+        // console.log(ogrenciler.get(1));
+        // console.log(ogrenciler.get("2014"));
+        // console.log(ogrenciler.get(user));
+
+        let sonuc;
+        sonuc = ogrenciler.size;
+        sonuc = ogrenciler.has(1); //Key e bakıyor var mı diye
+
+        console.log(sonuc);
+
+        for(let x of ogrenciler.keys())
+        {
+            console.log(x);
+        }
+
+        for(let x of ogrenciler.values())
+        {
+
+            console.log(x);
+        }
+
+
+
+
+    </script>
+-->
+<!--
+ <script>
+    //INHERITANCE    
+
+    // Kisi => k1, k2
+    // Ogrenci => o1, o2
+    // Ogretmen
+
+    // parent
+    class Kisi {
+        constructor(ad, dogumYili) {
+             console.log("kisi constructor");
+             this.ad = ad;
+             this.dogumYili = dogumYili;
+        }
+
+        yasHesapla() {
+             let tarih = new Date().getFullYear();
+             return tarih - this.dogumYili;
+        }
+
+        kendiniTanit() {
+            return `benim adım ${this.ad}`;
+        }
+    }
+
+    // child 
+    class Ogrenci extends Kisi {
+         constructor(ad, dogumYili, okulNumarasi) {
+             console.log("öğrenci constructor");
+             super(ad, dogumYili);
+             this.okulNumarasi = okulNumarasi;
+         }
+
+         dersCalis() {
+             return `${this.ad} ders çalışıyor.`;
+         }
+
+         kendiniTanit() {
+            return `benim adım ${this.ad} ve okul numaram ${this.okulNumarasi}`;
+         }
+    }
+
+    let kisi = new Kisi("ali", 1990);
+    let ogrenci = new Ogrenci("ahmet",2000, 123);
+
+ //    console.log(kisi.yasHesapla());
+ //    console.log(ogrenci.yasHesapla());
+ //    console.log(ogrenci.dersCalis());
+
+    console.log(kisi.kendiniTanit());
+    console.log(ogrenci.kendiniTanit());
+     
+ </script>
+-->
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
